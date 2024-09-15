@@ -1,0 +1,26 @@
+# Settarget
+
+function settarget(){
+	if [ $# -eq 1 ]; then
+	echo $1 > ~/.config/bin/target
+	elif [ $# -gt 2 ]; then
+	echo "settarget [IP] [NAME] | settarget [IP]"
+	else
+	echo $1 $2 > ~/.config/bin/target
+	fi
+}
+
+function cleartarget(){
+	echo '' > ~/.config/bin/target
+}
+
+
+# Manual aliases
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'
+alias cat='/bin/batcat --paging=never'
+alias catn='/usr/bin/cat'
+alias catnl='batcat'
